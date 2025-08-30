@@ -1,0 +1,84 @@
+@import "./sass/vendors/bootstrap.scss";
+
+@import "./sass/abstracts/mixins";
+@import "./sass/abstracts/variables";
+@import "./sass/abstracts/helpers";
+
+@import "./sass/base/base";
+@import "./sass/base/typography";
+
+@import "./sass/components/buttons";
+
+@import "./sass/layout/footer";
+@import "./sass/layout/sections";
+
+@import "./sass/sections/about";
+@import "./sass/sections/contact";
+@import "./sass/sections/hero";
+@import "./sass/sections/projects";
+
+#experience {
+  color: $dark-blue-text;
+  padding: 10rem 150;
+
+  @include respond(tab-land) {
+    padding: 5rem 0;
+  }
+
+  .experience-wrapper {
+    margin-bottom: 10rem;
+
+    @include respond(phone) {
+      margin-bottom: 5rem;
+    }
+
+    &__title {
+      font-size: $big-font-size;
+      text-align: center;
+      margin-bottom: 6rem;
+      font-weight: bold;
+    }
+
+    &__item {
+      background: $white-color;
+      border-radius: 1rem;
+      padding: 3rem;
+      margin-bottom: 5rem;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08),
+        0 0 6px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-8px);
+      }
+
+      h2 {
+        font-size: $mid-font-size;
+        color: $secondary-color;
+        margin-bottom: 0.8rem;
+      }
+
+      .experience-wrapper__date {
+        font-size: 1.5rem;
+        color: $dark-grey;
+        margin-bottom: 0.5rem;
+      }
+
+      .experience-wrapper__role {
+        font-weight: 600;
+        margin-bottom: 1.2rem;
+        font-size: 1.8rem;
+      }
+
+      ul {
+        padding-left: 2rem;
+
+        li {
+          margin-bottom: 0.8rem;
+          line-height: 1.6;
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
